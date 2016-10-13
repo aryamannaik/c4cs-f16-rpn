@@ -17,6 +17,9 @@ class TestBasics(unittest.TestCase):
         def test_badstring(self):
             with self.assertRaises(TypeError):
                 rpn.calculate("10 20 30 /")
+        def test_carat(self):
+            result = rpn.calculate("2 2 **")
+            self.assertEqual(4, result)
 
 if __name__ == '__main__':
     unittest.main()
