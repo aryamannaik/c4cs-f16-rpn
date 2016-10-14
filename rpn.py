@@ -2,12 +2,16 @@
 
 import operator
 
+def concat(arg1, arg2):
+    return int(str(arg1) + str(arg2))
+
 operators = {
     '+' : operator.add,
     '-' : operator.sub,
     '*' : operator.mul,
     '/' : operator.truediv,
     '**' : operator.pow,
+    '++' : concat,
 }
 
 def calculate(arg):
